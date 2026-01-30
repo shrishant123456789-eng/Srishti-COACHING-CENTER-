@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRISHTI COACHING CENTER</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold:#C9A24D;
+      --green:#0F3D2E;
+      --ivory:#FAF8F3;
+      --black:#1C1C1C;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--ivory);
+      color:var(--black);
+      line-height:1.6;
+    }
+    h1,h2,h3{
+      font-family:'Playfair Display',serif;
+      color:var(--green);
+    }
+    section{padding:4rem 1.2rem}
+    .container{max-width:1200px;margin:auto}
+    header{
+      position:sticky;top:0;z-index:100;
+      background:var(--green);
+      box-shadow:0 4px 10px rgba(0,0,0,.1)
+    }
+    nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.8rem 1.2rem
+    }
+    nav img{height:48px}
+    nav ul{display:flex;gap:1rem;list-style:none}
+    nav a{
+      color:#fff;text-decoration:none;font-size:.9rem;
+      padding:.4rem .6rem;border-radius:6px
+    }
+    nav a:hover{background:rgba(255,255,255,.15)}
+    .hero{
+      background:linear-gradient(rgba(15,61,46,.85),rgba(15,61,46,.85)),
+      url('classroom1.jpg') center/cover no-repeat;
+      color:#fff;text-align:center;padding:6rem 1.5rem
+    }
+    .hero h1{color:var(--gold);font-size:2.5rem}
+    .hero p{max-width:700px;margin:1rem auto}
+    .btn{
+      display:inline-flex;align-items:center;gap:.4rem;
+      background:var(--gold);color:#000;
+      padding:.6rem 1.2rem;border-radius:30px;
+      text-decoration:none;font-weight:600;margin:.4rem
+    }
+    .btn:hover{opacity:.85}
+    .card-grid{
+      display:grid;gap:1.5rem
+    }
+    @media(min-width:768px){
+      .card-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    .card{
+      background:#fff;border-radius:14px;
+      padding:1.5rem;
+      box-shadow:0 8px 18px rgba(0,0,0,.08);
+      border-top:4px solid var(--gold);
+      transition:transform .3s
+    }
+    .card:hover{transform:translateY(-6px)}
+    .profile img{
+      width:100%;border-radius:12px;
+      border:3px solid var(--gold);
+      margin-bottom:.8rem
+    }
+    .teachers ul{list-style:none}
+    .teachers li{margin:.4rem 0}
+    .facilities li{margin:.4rem 0}
+    .admission{
+      background:var(--green);color:#fff;text-align:center
+    }
+    .admission h2{color:var(--gold)}
+    .gallery-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+      gap:1rem
+    }
+    .gallery-grid img{
+      width:100%;border-radius:12px;
+      cursor:pointer
+    }
+    .lightbox{
+      position:fixed;inset:0;
+      background:rgba(0,0,0,.85);
+      display:none;align-items:center;justify-content:center
+    }
+    .lightbox img{max-width:90%;max-height:90%}
+    .contact a{
+      display:inline-flex;align-items:center;
+      gap:.4rem;margin:.3rem 0;
+      color:var(--green);text-decoration:none;font-weight:600
+    }
+    footer{
+      background:var(--green);
+      color:#fff;text-align:center;padding:2rem 1rem
+    }
+    .whatsapp-float{
+      position:fixed;bottom:18px;right:18px;
+      background:#25D366;color:#fff;
+      padding:.7rem 1rem;border-radius:30px;
+      text-decoration:none;font-weight:600;
+      box-shadow:0 6px 14px rgba(0,0,0,.25)
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <img src="logo.jpg" alt="SRISHTI COACHING CENTER Logo">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#management">Management</a></li>
+      <li><a href="#teachers">Teachers</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>SRISHTI COACHING CENTER</h1>
+  <p>Education, Discipline and a Step Towards Success</p>
+  <p><strong>Address:</strong> Kamala Chauraha, Haidergarh</p>
+  <a href="tel:9005806464" class="btn">📞 Call Now</a>
+  <a href="https://wa.me/919005806464" class="btn">💬 WhatsApp</a>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About the Institute</h2>
+    <p>
+      SRISHTI COACHING CENTER is a disciplined and student-focused institute
+      dedicated to academic excellence from Class 1st to 12th. Our goal is to
+      build strong fundamentals, moral discipline, and consistent performance
+      in board and competitive examinations.
+    </p>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="container">
+    <h2>Courses Offered</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Classes 1st – 8th</h3>
+        <ul>
+          <li>Mathematics</li>
+          <li>Science</li>
+          <li>English</li>
+          <li>Social Science</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Classes 9th – 10th</h3>
+        <p>Strong board-oriented preparation with regular testing.</p>
+      </div>
+      <div class="card">
+        <h3>Classes 11th – 12th</h3>
+        <ul>
+          <li>PCM</li>
+          <li>PCB</li>
+          <li>Arts</li>
+          <li>Commerce</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="management">
+  <div class="container">
+    <h2>Management Team</h2>
+    <div class="card-grid">
+      <div class="card profile">
+        <img src="ravi.jpg" alt="Ravi Prakash Tiwari">
+        <h3>Ravi Prakash Tiwari – Manager</h3>
+        <p>B.Sc, M.Sc, M.A (English), M.A (Education), B.P.Ed</p>
+        <a href="tel:8960662683">📞 8960662683</a>
+        <a href="https://wa.me/918960662683">💬 WhatsApp</a>
+      </div>
+      <div class="card profile">
+        <img src="vipin.jpg" alt="Vipin Tiwari">
+        <h3>Vipin Tiwari – Administrator</h3>
+        <p>B.A, B.P.Ed, Bombay Arts</p>
+        <a href="tel:9838973710">📞 9838973710</a>
+        <a href="https://wa.me/919838973710">💬 WhatsApp</a>
+      </div>
+      <div class="card profile">
+        <img src="sudhanshu.jpg" alt="Sudhanshu Shukla">
+        <h3>Sudhanshu Shukla – Operator</h3>
+        <p>B.A + ADCA + BSS</p>
+        <a href="tel:9005806464">📞 9005806464</a>
+        <a href="https://wa.me/919005806464">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teachers" class="teachers">
+  <div class="container">
+    <h2>Teachers</h2>
+    <ul>
+      <li>Anuj Yadav – Teacher – 📞 9336287953</li>
+      <li>Vibha Singh – Teacher</li>
+      <li>Muskan Pandey – Teacher</li>
+      <li>Akanksha Tiwari – Teacher</li>
+    </ul>
+  </div>
+</section>
+
+<section class="facilities">
+  <div class="container">
+    <h2>Facilities</h2>
+    <ul>
+      <li>Experienced and qualified teachers</li>
+      <li>Syllabus-based and exam-oriented teaching</li>
+      <li>Regular tests and evaluation</li>
+      <li>Doubt clearing sessions</li>
+      <li>Personal attention</li>
+      <li>Disciplined and positive learning environment</li>
+      <li>Strong preparation for board and competitive exams</li>
+    </ul>
+  </div>
+</section>
+
+<section class="admission">
+  <h2>Admissions Open</h2>
+  <p>Admissions Open – 2 February 2026</p>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="classroom1.jpg" alt="Classroom">
+      <img src="classroom2.jpg" alt="Teaching">
+      <img src="classroom3.jpg" alt="Students">
+      <img src="classroom4.jpg" alt="Board Work">
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Preview">
+</div>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Kamala Chauraha, Haidergarh</p>
+    <a href="tel:9005806464">📞 Call: 9005806464</a><br>
+    <a href="https://wa.me/919005806464">💬 WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p>SRISHTI COACHING CENTER</p>
+  <p>Kamala Chauraha, Haidergarh</p>
+  <p>© SRISHTI COACHING CENTER</p>
+</footer>
+
+<a href="https://wa.me/919005806464" class="whatsapp-float">WhatsApp</a>
+
+<script>
+  const imgs=document.querySelectorAll('.gallery-grid img');
+  const lightbox=document.getElementById('lightbox');
+  const lbImg=lightbox.querySelector('img');
+  imgs.forEach(img=>{
+    img.onclick=()=>{
+      lbImg.src=img.src;
+      lightbox.style.display='flex';
+    }
+  });
+  lightbox.onclick=()=>lightbox.style.display='none';
+</script>
+
+</body>
+</html>
