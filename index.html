@@ -1,294 +1,1565 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SRISHTI COACHING CENTER</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRISHTI COACHING CENTER - Education, Discipline and Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for Brand Colors */
+        :root {
+            --royal-gold: #C9A24D;
+            --dark-green: #0F3D2E;
+            --ivory-white: #FAF8F3;
+            --charcoal-black: #1C1C1C;
+            --soft-gold: #D4AF6A;
+            --accent-gold: #B8935C;
+            --light-green: #1A5C42;
+            --gradient-gold: linear-gradient(135deg, #C9A24D 0%, #D4AF6A 100%);
+            --gradient-green: linear-gradient(135deg, #0F3D2E 0%, #1A5C42 100%);
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <style>
-    :root{
-      --gold:#C9A24D;
-      --green:#0F3D2E;
-      --ivory:#FAF8F3;
-      --black:#1C1C1C;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',sans-serif;
-      background:var(--ivory);
-      color:var(--black);
-      line-height:1.6;
-    }
-    h1,h2,h3{
-      font-family:'Playfair Display',serif;
-      color:var(--green);
-    }
-    section{padding:4rem 1.2rem}
-    .container{max-width:1200px;margin:auto}
-    header{
-      position:sticky;top:0;z-index:100;
-      background:var(--green);
-      box-shadow:0 4px 10px rgba(0,0,0,.1)
-    }
-    nav{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:.8rem 1.2rem
-    }
-    nav img{height:48px}
-    nav ul{display:flex;gap:1rem;list-style:none}
-    nav a{
-      color:#fff;text-decoration:none;font-size:.9rem;
-      padding:.4rem .6rem;border-radius:6px
-    }
-    nav a:hover{background:rgba(255,255,255,.15)}
-    .hero{
-      background:linear-gradient(rgba(15,61,46,.85),rgba(15,61,46,.85)),
-      url('classroom1.jpg') center/cover no-repeat;
-      color:#fff;text-align:center;padding:6rem 1.5rem
-    }
-    .hero h1{color:var(--gold);font-size:2.5rem}
-    .hero p{max-width:700px;margin:1rem auto}
-    .btn{
-      display:inline-flex;align-items:center;gap:.4rem;
-      background:var(--gold);color:#000;
-      padding:.6rem 1.2rem;border-radius:30px;
-      text-decoration:none;font-weight:600;margin:.4rem
-    }
-    .btn:hover{opacity:.85}
-    .card-grid{
-      display:grid;gap:1.5rem
-    }
-    @media(min-width:768px){
-      .card-grid{grid-template-columns:repeat(3,1fr)}
-    }
-    .card{
-      background:#fff;border-radius:14px;
-      padding:1.5rem;
-      box-shadow:0 8px 18px rgba(0,0,0,.08);
-      border-top:4px solid var(--gold);
-      transition:transform .3s
-    }
-    .card:hover{transform:translateY(-6px)}
-    .profile img{
-      width:100%;border-radius:12px;
-      border:3px solid var(--gold);
-      margin-bottom:.8rem
-    }
-    .teachers ul{list-style:none}
-    .teachers li{margin:.4rem 0}
-    .facilities li{margin:.4rem 0}
-    .admission{
-      background:var(--green);color:#fff;text-align:center
-    }
-    .admission h2{color:var(--gold)}
-    .gallery-grid{
-      display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-      gap:1rem
-    }
-    .gallery-grid img{
-      width:100%;border-radius:12px;
-      cursor:pointer
-    }
-    .lightbox{
-      position:fixed;inset:0;
-      background:rgba(0,0,0,.85);
-      display:none;align-items:center;justify-content:center
-    }
-    .lightbox img{max-width:90%;max-height:90%}
-    .contact a{
-      display:inline-flex;align-items:center;
-      gap:.4rem;margin:.3rem 0;
-      color:var(--green);text-decoration:none;font-weight:600
-    }
-    footer{
-      background:var(--green);
-      color:#fff;text-align:center;padding:2rem 1rem
-    }
-    .whatsapp-float{
-      position:fixed;bottom:18px;right:18px;
-      background:#25D366;color:#fff;
-      padding:.7rem 1rem;border-radius:30px;
-      text-decoration:none;font-weight:600;
-      box-shadow:0 6px 14px rgba(0,0,0,.25)
-    }
-  </style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--ivory-white);
+            color: var(--charcoal-black);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--gradient-green);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(15, 61, 46, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 6px 25px rgba(15, 61, 46, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--royal-gold);
+            object-fit: cover;
+            background: white;
+            padding: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .logo-text {
+            color: var(--royal-gold);
+            font-size: 1.8em;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--ivory-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05em;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--royal-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--royal-gold);
+        }
+
+        .nav-menu a:hover::after {
+            width: 80%;
+        }
+
+        .call-btn {
+            background: var(--gradient-gold);
+            color: var(--dark-green);
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(201, 162, 77, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .call-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(201, 162, 77, 0.6);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: var(--royal-gold);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--dark-green);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 100px 30px;
+            background: linear-gradient(135deg, var(--ivory-white) 0%, #F5EFE3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 162, 77, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4.5em;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+
+        .hero-tagline {
+            font-size: 1.8em;
+            color: var(--royal-gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+            color: var(--charcoal-black);
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--dark-green);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 6px 20px rgba(201, 162, 77, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--gradient-green);
+            color: var(--ivory-white);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 6px 20px rgba(15, 61, 46, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(15, 61, 46, 0.5);
+        }
+
+        /* Admission Banner */
+        .admission-banner {
+            background: var(--gradient-gold);
+            padding: 25px 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(201, 162, 77, 0.3);
+        }
+
+        .admission-banner h3 {
+            color: var(--dark-green);
+            font-size: 2em;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: var(--charcoal-black);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2em;
+            color: var(--royal-gold);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1em;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .about-features {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid var(--royal-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .about-features h4 {
+            color: var(--dark-green);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Courses Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            border: 3px solid var(--royal-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--gradient-gold);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(201, 162, 77, 0.3);
+        }
+
+        .course-card h3 {
+            font-size: 2em;
+            color: var(--dark-green);
+            margin-bottom: 25px;
+        }
+
+        .course-card h4 {
+            font-size: 1.3em;
+            color: var(--royal-gold);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .course-list {
+            list-style: none;
+        }
+
+        .course-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .course-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--royal-gold);
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        /* Management Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            border: 3px solid var(--royal-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--gradient-gold);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(201, 162, 77, 0.3);
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            border: 4px solid var(--royal-gold);
+            object-fit: cover;
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--soft-gold) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-size: 3em;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(201, 162, 77, 0.3);
+        }
+
+        .team-card h3 {
+            font-size: 1.6em;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .team-role {
+            color: var(--royal-gold);
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .team-qualification {
+            color: var(--charcoal-black);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 0.95em;
+        }
+
+        .team-contact {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95em;
+        }
+
+        .call-btn-small {
+            background: var(--gradient-green);
+            color: var(--ivory-white);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Teachers Section */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid var(--royal-gold);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(201, 162, 77, 0.25);
+        }
+
+        .teacher-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: var(--gradient-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-size: 2.5em;
+            font-weight: bold;
+            border: 3px solid var(--dark-green);
+        }
+
+        .teacher-card h4 {
+            font-size: 1.4em;
+            color: var(--dark-green);
+            margin-bottom: 8px;
+        }
+
+        .teacher-subject {
+            color: var(--royal-gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Facilities Section */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .facility-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 5px solid var(--royal-gold);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.2);
+        }
+
+        .facility-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .facility-card h4 {
+            color: var(--dark-green);
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+
+        .facility-card p {
+            color: var(--charcoal-black);
+            line-height: 1.7;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--light-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--royal-gold);
+            font-weight: 600;
+            font-size: 1.1em;
+            border: 3px solid var(--royal-gold);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            border: 3px solid var(--royal-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .contact-info h3 {
+            font-size: 2em;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: var(--dark-green);
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .contact-details p {
+            color: var(--charcoal-black);
+            line-height: 1.8;
+        }
+
+        .contact-details a {
+            color: var(--royal-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            border: 3px solid var(--royal-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .contact-form h3 {
+            font-size: 2em;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--royal-gold);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--dark-green);
+            box-shadow: 0 0 10px rgba(201, 162, 77, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--gradient-gold);
+            color: var(--dark-green);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(201, 162, 77, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gradient-green);
+            color: var(--ivory-white);
+            padding: 60px 30px 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--royal-gold);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--ivory-white);
+            line-height: 1.9;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--royal-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(201, 162, 77, 0.3);
+            color: var(--ivory-white);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 3em;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--dark-green);
+                width: 100%;
+                padding: 30px;
+                gap: 20px;
+                transition: left 0.3s ease;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .logo-text {
+                font-size: 1.3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero-tagline {
+                font-size: 1.4em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .courses-grid,
+            .team-grid,
+            .teachers-grid,
+            .facilities-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--gradient-gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(201, 162, 77, 0.4);
+            z-index: 998;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-top.active {
+            display: flex;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(201, 162, 77, 0.6);
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="logo.jpg" alt="SRISHTI COACHING CENTER Logo" class="logo-img">
+                <div class="logo-text">SRISHTI</div>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Classes</a></li>
+                    <li><a href="#team">Management</a></li>
+                    <li><a href="#teachers">Teachers</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:9005806464" class="call-btn">📞 Call Now</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-<header>
-  <nav>
-    <img src="logo.jpg" alt="SRISHTI COACHING CENTER Logo">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#management">Management</a></li>
-      <li><a href="#teachers">Teachers</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>SRISHTI COACHING CENTER</h1>
-  <p>Education, Discipline and a Step Towards Success</p>
-  <p><strong>Address:</strong> Kamala Chauraha, Haidergarh</p>
-  <a href="tel:9005806464" class="btn">📞 Call Now</a>
-  <a href="https://wa.me/919005806464" class="btn">💬 WhatsApp</a>
-</section>
-
-<section id="about">
-  <div class="container">
-    <h2>About the Institute</h2>
-    <p>
-      SRISHTI COACHING CENTER is a disciplined and student-focused institute
-      dedicated to academic excellence from Class 1st to 12th. Our goal is to
-      build strong fundamentals, moral discipline, and consistent performance
-      in board and competitive examinations.
-    </p>
-  </div>
-</section>
-
-<section id="courses">
-  <div class="container">
-    <h2>Courses Offered</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Classes 1st – 8th</h3>
-        <ul>
-          <li>Mathematics</li>
-          <li>Science</li>
-          <li>English</li>
-          <li>Social Science</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Classes 9th – 10th</h3>
-        <p>Strong board-oriented preparation with regular testing.</p>
-      </div>
-      <div class="card">
-        <h3>Classes 11th – 12th</h3>
-        <ul>
-          <li>PCM</li>
-          <li>PCB</li>
-          <li>Arts</li>
-          <li>Commerce</li>
-        </ul>
-      </div>
+    <!-- Admission Banner -->
+    <div class="admission-banner">
+        <h3>🎓 ADMISSIONS OPEN – 2 FEBRUARY 2026 🎓</h3>
     </div>
-  </div>
-</section>
 
-<section id="management">
-  <div class="container">
-    <h2>Management Team</h2>
-    <div class="card-grid">
-      <div class="card profile">
-        <img src="ravi.jpg" alt="Ravi Prakash Tiwari">
-        <h3>Ravi Prakash Tiwari – Manager</h3>
-        <p>B.Sc, M.Sc, M.A (English), M.A (Education), B.P.Ed</p>
-        <a href="tel:8960662683">📞 8960662683</a>
-        <a href="https://wa.me/918960662683">💬 WhatsApp</a>
-      </div>
-      <div class="card profile">
-        <img src="vipin.jpg" alt="Vipin Tiwari">
-        <h3>Vipin Tiwari – Administrator</h3>
-        <p>B.A, B.P.Ed, Bombay Arts</p>
-        <a href="tel:9838973710">📞 9838973710</a>
-        <a href="https://wa.me/919838973710">💬 WhatsApp</a>
-      </div>
-      <div class="card profile">
-        <img src="sudhanshu.jpg" alt="Sudhanshu Shukla">
-        <h3>Sudhanshu Shukla – Operator</h3>
-        <p>B.A + ADCA + BSS</p>
-        <a href="tel:9005806464">📞 9005806464</a>
-        <a href="https://wa.me/919005806464">💬 WhatsApp</a>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <h1>SRISHTI COACHING CENTER</h1>
+            <p class="hero-tagline">Education, Discipline and a Step Towards Success</p>
+            <p class="hero-subtitle">Kamala Chauraha, Haidergarh - Where Dreams Meet Excellence</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">🎓 Enroll Now</a>
+                <a href="tel:9005806464" class="btn-secondary">📞 Call for Admission</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Building Futures Through Quality Education and Strong Values</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to SRISHTI COACHING CENTER</h3>
+                    <p>At SRISHTI COACHING CENTER, we believe that education is not just about academic excellence but also about building character, discipline, and a strong foundation for the future. Located at Kamala Chauraha, Haidergarh, we are committed to providing quality education to students from Class 1st to 12th.</p>
+                    <p>Our institute stands as a beacon of knowledge, where experienced educators work tirelessly to nurture young minds and prepare them for both board examinations and competitive challenges ahead.</p>
+                    <p>With a focus on personalized attention, regular assessments, and a disciplined learning environment, we ensure that every student receives the guidance they need to excel academically and grow personally.</p>
+                </div>
+                <div class="about-features">
+                    <h4>Our Core Values</h4>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span>Excellence in Teaching</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span>Disciplined Learning Environment</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span>Individual Student Focus</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span>Comprehensive Exam Preparation</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span>Character Building</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span>Success-Oriented Approach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section" id="courses" style="background: linear-gradient(135deg, #F5EFE3 0%, var(--ivory-white) 100%);">
+        <div class="container">
+            <h2 class="section-title">Our Classes</h2>
+            <p class="section-subtitle">Comprehensive Education from Foundation to Board Examinations</p>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Classes 1st to 8th</h3>
+                    <p>Building a strong foundation for future academic success with comprehensive coverage of all core subjects.</p>
+                    <h4>Subjects Offered:</h4>
+                    <ul class="course-list">
+                        <li>Mathematics</li>
+                        <li>Science</li>
+                        <li>English</li>
+                        <li>Social Science</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <h3>Classes 9th to 12th</h3>
+                    <p>Specialized coaching for board examinations and competitive exam preparation across multiple streams.</p>
+                    <h4>Streams Available:</h4>
+                    <ul class="course-list">
+                        <li>PCM (Physics, Chemistry, Mathematics)</li>
+                        <li>PCB (Physics, Chemistry, Biology)</li>
+                        <li>Arts</li>
+                        <li>Commerce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Team Section -->
+    <section class="section" id="team">
+        <div class="container">
+            <h2 class="section-title">Our Management Team</h2>
+            <p class="section-subtitle">Experienced Leaders Committed to Educational Excellence</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">RPT</div>
+                    <h3>Ravi Prakash Tiwari</h3>
+                    <p class="team-role">Manager</p>
+                    <p class="team-qualification">B.Sc, M.Sc, M.A (English), M.A (Education), B.P.Ed</p>
+                    <div class="team-contact">
+                        <a href="tel:8960662683" class="contact-btn call-btn-small">📞 Call</a>
+                        <a href="https://wa.me/918960662683" target="_blank" class="contact-btn whatsapp-btn">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">VT</div>
+                    <h3>Vipin Tiwari</h3>
+                    <p class="team-role">Administrator</p>
+                    <p class="team-qualification">B.A, B.P.Ed, Bombay Arts</p>
+                    <div class="team-contact">
+                        <a href="tel:9838973710" class="contact-btn call-btn-small">📞 Call</a>
+                        <a href="https://wa.me/919838973710" target="_blank" class="contact-btn whatsapp-btn">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">SS</div>
+                    <h3>Sudhanshu Shukla</h3>
+                    <p class="team-role">Operator</p>
+                    <p class="team-qualification">B.A + ADCA + BSS</p>
+                    <div class="team-contact">
+                        <a href="tel:9005806464" class="contact-btn call-btn-small">📞 Call</a>
+                        <a href="https://wa.me/919005806464" target="_blank" class="contact-btn whatsapp-btn">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="section" id="teachers" style="background: linear-gradient(135deg, #F5EFE3 0%, var(--ivory-white) 100%);">
+        <div class="container">
+            <h2 class="section-title">Our Teachers</h2>
+            <p class="section-subtitle">Dedicated Educators Shaping Young Minds</p>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <div class="teacher-avatar">AY</div>
+                    <h4>Anuj Yadav</h4>
+                    <p class="teacher-subject">Teacher</p>
+                    <div class="team-contact">
+                        <a href="tel:9336287953" class="contact-btn call-btn-small">📞 Call</a>
+                        <a href="https://wa.me/919336287953" target="_blank" class="contact-btn whatsapp-btn">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">VS</div>
+                    <h4>Vibha Singh</h4>
+                    <p class="teacher-subject">Teacher</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">MP</div>
+                    <h4>Muskan Pandey</h4>
+                    <p class="teacher-subject">Teacher</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">AT</div>
+                    <h4>Akanksha Tiwari</h4>
+                    <p class="teacher-subject">Teacher</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="section" id="facilities">
+        <div class="container">
+            <h2 class="section-title">Our Facilities</h2>
+            <p class="section-subtitle">Creating the Perfect Learning Environment</p>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon">👨‍🏫</div>
+                    <h4>Experienced Teachers</h4>
+                    <p>Highly qualified and experienced educators dedicated to student success.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">📚</div>
+                    <h4>Syllabus-Based Teaching</h4>
+                    <p>Comprehensive syllabus coverage with exam-oriented teaching methodology.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">📝</div>
+                    <h4>Regular Tests</h4>
+                    <p>Frequent assessments and evaluations to track student progress.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">❓</div>
+                    <h4>Doubt Clearing Sessions</h4>
+                    <p>Dedicated time for individual doubt resolution and concept clarification.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">👤</div>
+                    <h4>Personal Attention</h4>
+                    <p>Individual focus on each student's strengths and areas of improvement.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🎯</div>
+                    <h4>Disciplined Environment</h4>
+                    <p>Positive and structured learning atmosphere conducive to concentration.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">🏆</div>
+                    <h4>Board Exam Preparation</h4>
+                    <p>Focused preparation for board examinations with proven strategies.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon">📈</div>
+                    <h4>Competitive Exam Guidance</h4>
+                    <p>Strong foundation for competitive examinations beyond school curriculum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery" style="background: linear-gradient(135deg, #F5EFE3 0%, var(--ivory-white) 100%);">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Glimpses of Our Learning Environment</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="classroom-1.jpg">
+                    📸 Classroom View
+                </div>
+                <div class="gallery-item" data-image="teaching-session.jpg">
+                    📸 Teaching Session
+                </div>
+                <div class="gallery-item" data-image="students-learning.jpg">
+                    📸 Students Learning
+                </div>
+                <div class="gallery-item" data-image="test-day.jpg">
+                    📸 Test Day
+                </div>
+                <div class="gallery-item" data-image="doubt-session.jpg">
+                    📸 Doubt Clearing
+                </div>
+                <div class="gallery-item" data-image="campus-view.jpg">
+                    📸 Campus View
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in Touch for Admissions and Inquiries</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>Kamala Chauraha, Haidergarh</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone Numbers</h4>
+                            <p><a href="tel:9005806464">9005806464</a> (Main)</p>
+                            <p><a href="tel:8960662683">8960662683</a> (Manager)</p>
+                            <p><a href="tel:9838973710">9838973710</a> (Administrator)</p>
+                            <p><a href="tel:9336287953">9336287953</a> (Teacher)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h4>Admission Timing</h4>
+                            <p>Monday to Saturday: 9:00 AM - 6:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Quick Inquiry</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Student Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Class</label>
+                            <input type="text" id="class" name="class" placeholder="e.g., 10th" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SRISHTI COACHING CENTER</h3>
+                <p>Education, Discipline and a Step Towards Success</p>
+                <p style="margin-top: 20px;">Kamala Chauraha, Haidergarh</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#courses">Classes</a></li>
+                    <li><a href="#team">Management</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Classes</h3>
+                <ul class="footer-links">
+                    <li>Classes 1st to 8th</li>
+                    <li>Classes 9th to 12th</li>
+                    <li>PCM Stream</li>
+                    <li>PCB Stream</li>
+                    <li>Arts Stream</li>
+                    <li>Commerce Stream</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📞 Main: <a href="tel:9005806464">9005806464</a></p>
+                <p>📞 Manager: <a href="tel:8960662683">8960662683</a></p>
+                <p>📞 Admin: <a href="tel:9838973710">9838973710</a></p>
+                <p style="margin-top: 20px;">
+                    <a href="https://wa.me/919005806464" target="_blank" style="background: #25D366; padding: 10px 20px; border-radius: 25px; display: inline-block; margin-top: 10px;">💬 WhatsApp Us</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SRISHTI COACHING CENTER. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919005806464" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.847.748 5.519 2.058 7.837L0 32l8.347-2.035A15.936 15.936 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.148 22.548c-.348.98-1.732 1.796-2.836 2.036-.756.164-1.74.296-5.052-.828-4.232-1.436-6.968-5.708-7.176-5.972-.208-.264-1.7-2.26-1.7-4.312s1.076-3.06 1.456-3.48c.38-.42.828-.528 1.108-.528.28 0 .56.004.804.016.26.012.608-.1.952.724.348.836 1.188 2.9 1.292 3.108.104.208.172.452.036.716-.136.264-.204.428-.404.66-.2.232-.42.516-.6.692-.2.196-.408.408-.176.8.232.392 1.032 1.7 2.216 2.752 1.52 1.352 2.8 1.772 3.2 1.968.4.196.632.164.864-.1.232-.264.996-1.164 1.264-1.564.264-.4.528-.336.888-.2.36.136 2.292 1.08 2.684 1.276.392.196.652.292.748.452.096.16.096.92-.252 1.9z"/>
+        </svg>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        ↑
     </div>
-  </div>
-</section>
 
-<section id="teachers" class="teachers">
-  <div class="container">
-    <h2>Teachers</h2>
-    <ul>
-      <li>Anuj Yadav – Teacher – 📞 9336287953</li>
-      <li>Vibha Singh – Teacher</li>
-      <li>Muskan Pandey – Teacher</li>
-      <li>Akanksha Tiwari – Teacher</li>
-    </ul>
-  </div>
-</section>
-
-<section class="facilities">
-  <div class="container">
-    <h2>Facilities</h2>
-    <ul>
-      <li>Experienced and qualified teachers</li>
-      <li>Syllabus-based and exam-oriented teaching</li>
-      <li>Regular tests and evaluation</li>
-      <li>Doubt clearing sessions</li>
-      <li>Personal attention</li>
-      <li>Disciplined and positive learning environment</li>
-      <li>Strong preparation for board and competitive exams</li>
-    </ul>
-  </div>
-</section>
-
-<section class="admission">
-  <h2>Admissions Open</h2>
-  <p>Admissions Open – 2 February 2026</p>
-</section>
-
-<section id="gallery">
-  <div class="container">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="classroom1.jpg" alt="Classroom">
-      <img src="classroom2.jpg" alt="Teaching">
-      <img src="classroom3.jpg" alt="Students">
-      <img src="classroom4.jpg" alt="Board Work">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="" class="lightbox-content" id="lightboxImg">
     </div>
-  </div>
-</section>
 
-<div class="lightbox" id="lightbox">
-  <img src="" alt="Preview">
-</div>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
 
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> Kamala Chauraha, Haidergarh</p>
-    <a href="tel:9005806464">📞 Call: 9005806464</a><br>
-    <a href="https://wa.me/919005806464">💬 WhatsApp</a>
-  </div>
-</section>
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
-<footer>
-  <p>SRISHTI COACHING CENTER</p>
-  <p>Kamala Chauraha, Haidergarh</p>
-  <p>© SRISHTI COACHING CENTER</p>
-</footer>
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
 
-<a href="https://wa.me/919005806464" class="whatsapp-float">WhatsApp</a>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
 
-<script>
-  const imgs=document.querySelectorAll('.gallery-grid img');
-  const lightbox=document.getElementById('lightbox');
-  const lbImg=lightbox.querySelector('img');
-  imgs.forEach(img=>{
-    img.onclick=()=>{
-      lbImg.src=img.src;
-      lightbox.style.display='flex';
-    }
-  });
-  lightbox.onclick=()=>lightbox.style.display='none';
-</script>
+        // Scroll to Top Button
+        const scrollTop = document.getElementById('scrollTop');
 
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Gallery Lightbox
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-image');
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const studentClass = document.getElementById('class').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `New Admission Inquiry:%0A%0AName: ${name}%0APhone: ${phone}%0AClass: ${studentClass}%0AMessage: ${message}`;
+            const whatsappURL = `https://wa.me/919005806464?text=${whatsappMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+            
+            contactForm.reset();
+            alert('Your inquiry will be sent via WhatsApp. Thank you!');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.course-card, .team-card, .teacher-card, .facility-card, .gallery-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
